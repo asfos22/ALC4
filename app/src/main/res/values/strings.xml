@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">ALC 4</string>
+    <string name="label_welcome_to_acl">Welcome to ALC 4.0</string>
+    <string name="label_action_title">ALC 4 Phase 1</string>
+    <string name="about_acl">ABOUT ALC</string>
+    <string name="label_about_andela">About Andela</string>
+    <string name="label_my_profile">My Profile</string>
+    <string name="fellow_me">Follow Me</string>
+    <string name="label_name">Asante Foster</string>
+    <string name="email">asantefoster22@gmail.com</string>
+    <string name="phone_number">+233245964406</string>
+    <string name="ghana">Ghana</string>
+    <string name="summary"><font size="20"><B><i>Experience Summary</i></B>
+                         </font>"<br />\n
+    - 3 years of experience in Android Application development.\n<br /><br />
+    - 11 months experience of developing with Flutter.\n<br />
+    - I am a passionate and proficient mobile and PHP Developer with 2 and half years’ experience and as well as 1 and half years of experience with ASP.NET and VB.NET. I am constantly honing my skills within the web development and mobile development arena, and apply my knowledge to implement a range of practical solutions with the most efficiency. I possess a proven track record of apps developing and willing to learn new skills when requirement arises.
+
+    </string>
+    <string name="photos">Photos</string>
+    <string name="photo_number">345</string>
+    <string name="followers">Followers</string>
+    <string name="followers_number">1800</string>
+    <string name="following">Following</string>
+    <string name="following_number">23</string>
+    <string name="alc_4_0_phase_1_challenge">ALC 4.0: Phase 1 Challenge</string>
+    <string name="no_internet_available">No Internet available, Try  again later</string>
+
+</resources>
