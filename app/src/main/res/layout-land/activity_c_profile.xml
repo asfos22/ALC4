@@ -42,15 +42,6 @@
                                 android:scaleType="fitXY"
                                 android:src="@drawable/profile" />
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_horizontal"
-                                android:layout_marginTop="10dp"
-                                android:text="@string/label_name"
-                                android:textColor="@color/colorWhite"
-                                android:textSize="21sp"
-                                android:textStyle="bold" />
                         </LinearLayout>
 
                         <android.support.v7.widget.CardView
@@ -58,6 +49,16 @@
                             android:layout_height="120dp"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="275dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginBottom="16dp"
+                                android:layout_marginTop="8dp"
+                                android:text="@string/label_name"
+                                android:textSize="21sp"
+                                android:textStyle="bold" />
 
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -76,14 +77,14 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="@string/photos"
-                                        android:textSize="20sp" />
+                                        android:textSize="14sp" />
 
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:paddingTop="10dp"
                                         android:text="@string/photo_number"
-                                        android:textSize="20sp"
+                                        android:textSize="14sp"
                                         android:textStyle="bold" />
 
                                 </LinearLayout>
@@ -99,14 +100,14 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="@string/followers"
-                                        android:textSize="20sp" />
+                                        android:textSize="14sp" />
 
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:paddingTop="10dp"
                                         android:text="@string/followers_number"
-                                        android:textSize="20sp"
+                                        android:textSize="14sp"
                                         android:textStyle="bold" />
 
                                 </LinearLayout>
@@ -122,14 +123,14 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="@string/following"
-                                        android:textSize="20sp" />
+                                        android:textSize="14sp" />
 
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:paddingTop="10dp"
                                         android:text="@string/following_number"
-                                        android:textSize="20sp"
+                                        android:textSize="14sp"
                                         android:textStyle="bold" />
 
                                 </LinearLayout>
@@ -190,6 +191,29 @@
                         </LinearLayout>
 
                         <LinearLayout
+                            android:id="@+id/trackLinearLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="25dp"
+                            android:orientation="horizontal"
+                            android:paddingLeft="25dp">
+
+                            <ImageView
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:src="@drawable/ic_info_black_24dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:paddingLeft="20dp"
+                                android:text="@string/track_android"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="25dp"
@@ -234,6 +258,7 @@
                     </LinearLayout>
 
                     <Button
+                        android:id="@+id/followMeButton"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"

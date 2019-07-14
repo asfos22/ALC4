@@ -25,5 +25,6 @@
     <string name="following_number">23</string>
     <string name="alc_4_0_phase_1_challenge">ALC 4.0: Phase 1 Challenge</string>
     <string name="no_internet_available">No Internet available, Try  again later</string>
+    <string name="track_android">Track: Android</string>
 
 </resources>

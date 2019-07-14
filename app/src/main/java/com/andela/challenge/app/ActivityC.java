@@ -7,18 +7,21 @@
 package com.andela.challenge.app;
 
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 
 public class ActivityC extends AppCompatActivity {
     /**
-     * int
+     * init
      */
 
     private LinearLayout emailLinearLayout, callLinearLayout;
+    private Button followMeButton;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -29,6 +32,7 @@ public class ActivityC extends AppCompatActivity {
 
         emailLinearLayout = findViewById(R.id.emailLinearLayout);
         callLinearLayout = findViewById(R.id.callLinearLayout);
+        followMeButton = findViewById(R.id.followMeButton);
 
         /** OnClick Listener call */
         emailLinearLayout.setOnClickListener(new View.OnClickListener() {
@@ -47,6 +51,19 @@ public class ActivityC extends AppCompatActivity {
 
                 // call intent
                 callIntent();
+            }
+        });
+
+        /** OnClick Listener fellow me*/
+
+
+        followMeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                // call twitter intent
+
+                fellowMeIntent();
             }
         });
 
@@ -71,6 +88,27 @@ public class ActivityC extends AppCompatActivity {
         emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Andela job application feedback");
         emailIntent.putExtra(Intent.EXTRA_TEXT, "Hi Asante, You have qualify  to be employed by Andela.");
         startActivity(Intent.createChooser(emailIntent, "Chooser Title"));
+    }
+
+    /*** Follow me */
+
+    void fellowMeIntent() {
+
+        Intent intent;
+        try {
+            /** twitter app if user has it  */
+            this.getPackageManager().getPackageInfo("com.twitter.android", 0); /**'com.twitter.android' is package name to check for twitter app**/
+            intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://twitter.com/Andela?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"));
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+
+            /** use doest not have twitter app installed therefore browser **/
+            intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://twitter.com/Andela"));
+        }
+
+        /** this start intent*/
+        this.startActivity(intent);
     }
 
 }
